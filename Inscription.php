@@ -1,3 +1,36 @@
+<?php require_once 'ressource/PDO.php' ?>
+<?php require_once 'ressource/function.php' ?>
+<!----------------------------------------------------------------------------->
+
+<?php
+
+  if(!empty($_POST)){
+
+      $errors = array();
+
+
+        if(empty($_POST['username']) || !preg_match('/^[a-zA-Z0-9_]+$/', $_POST['username'])){ 
+
+          $errors['username'] = "Votre pseudo n'est pas valide!";
+          }
+
+        if(empty($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+
+          $errors['email'] = "Votre email n'est pas valide!";
+          }
+
+        if(empty($_POST['password']) || $_POST['password'] != $_POST['password_confirm']){
+
+          $errors['password'] = "Votre password n'est pas valide!";
+          }
+
+
+    //debug($errors); //permet de voir les messages d'erreurs.
+  }
+ ?>
+
+<!----------------------------------------------------------------------------->
+
 <!doctype html>
 <html class="no-js" lang="fr" dir="ltr">
   <head>
@@ -8,8 +41,9 @@
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
   </head>
-  <body>
+<!----------------------------------------------------------------------------->
 
+<body>
 
 <br><br><br>
 
@@ -20,19 +54,19 @@
         <h4 class="text-center">Crée votre compte</h4>
 
         <label>Pseudo
-          <input type="text" name="username" placeholder="Votre pseudo" required/>
+          <input type="text" name="username" placeholder="Votre pseudo"/>
         </label>
 
         <label>Email
-          <input type="email" name="mail" placeholder="Votre_email@exemple.com" required/>
+          <input type="email" name="email" placeholder="Votre_email@exemple.com"/>
         </label>
 
         <label>Mot de passe
-          <input type="password" name="password"  required/>
+          <input type="password" name="password" />
         </label>
 
         <label>Confirmer mot de passe
-          <input type="password" name="password_confirm" placeholder="Confirmation" required/>
+          <input type="password" name="password_confirm" placeholder="Confirmation"/>
         </label>
 
 
@@ -41,9 +75,7 @@
       </form></div>
     </div>
 
-
-
-
+<!----------------------------------------------------------------------------->
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
