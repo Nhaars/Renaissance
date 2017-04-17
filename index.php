@@ -10,7 +10,16 @@
   </head>
   <body>
 
-<h2>Hello</h2>
+
+    <?php require_once 'require/menu.php' ?>
+
+
+
+
+
+
+
+
 
 
     <script src="js/vendor/jquery.js"></script>

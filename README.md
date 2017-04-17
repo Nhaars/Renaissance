@@ -8,7 +8,7 @@
 - *Création d'un espace membre.*
 
     https://youtu.be/YNbPMm08jcw
-    ----------------------------
+
     https://youtu.be/s7qtAnH5YkY      
     https://youtu.be/vHs9sPIA61k
     https://youtu.be/fM5ZV2AaIjE*
@@ -23,6 +23,9 @@
 --------------------------------------------------------------------------------
 #Bugs à fix
 --------------------------------------------------------------------------------
+
+- Aligner boite forms au centre de ma page.
+- Récupéré mes forms dans mon ancien projet.
 
 --------------------------------------------------------------------------------
 #Features à venir
