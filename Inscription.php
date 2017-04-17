@@ -11,40 +11,35 @@
   <body>
 
 
-<br><br><br><br>
+<br><br><br>
+
 
     <div class="row">
-      <div class="large-4 columns"><!-- ... --></div>
-      <div class="large-4 columns"><form class="log-in-form">
+
+      <div class="small-4 small-centered columns"><form action="" method="POST" class="log-in-form">
         <h4 class="text-center">Crée votre compte</h4>
 
         <label>Pseudo
-          <input type="text" placeholder="Votre pseudo">
+          <input type="text" name="username" placeholder="Votre pseudo" required/>
         </label>
 
         <label>Email
-          <input type="email" placeholder="somebody@example.com">
+          <input type="email" name="mail" placeholder="Votre_email@exemple.com" required/>
+        </label>
+
+        <label>Mot de passe
+          <input type="password" name="password"  required/>
+        </label>
+
+        <label>Confirmer mot de passe
+          <input type="password" name="password_confirm" placeholder="Confirmation" required/>
         </label>
 
 
-        <label>Password
-          <input type="password" placeholder="Password">
-        </label>
-
-
-
-
-
-        <p><input type="submit" class="button expanded" value="S'enregistrer"></input></p>
+        <p><input type="submit" class="button success expanded" value="S'enregistrer"></input></p>
         <p class="text-center"><a href="#">Vous avez perdu votre mot de passe?</a></p>
       </form></div>
-      <div class="small-6 large-4 columns"><!-- ... --></div>
     </div>
-
-
-
-
-
 
 
 

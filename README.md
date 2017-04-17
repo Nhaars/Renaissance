@@ -24,8 +24,7 @@
 #Bugs à fix
 --------------------------------------------------------------------------------
 
-- Aligner boite forms au centre de ma page.
-- Récupéré mes forms dans mon ancien projet.
+
 
 --------------------------------------------------------------------------------
 #Features à venir
