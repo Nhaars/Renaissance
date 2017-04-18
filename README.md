@@ -7,7 +7,7 @@
 
 - *Création d'un espace membre.*
 
-    https://youtu.be/YNbPMm08jcw
+    https://youtu.be/YNbPMm08jcw 30:41
 
     https://youtu.be/s7qtAnH5YkY      
     https://youtu.be/vHs9sPIA61k
@@ -34,7 +34,7 @@
 - Chat.
 - Systeme d'article/blog/Portfolio.
 - Edition de profile.[Pseudo/Annif/MDP/Avatar]
-- Systeme de memebre.
+- Systeme de membre.
 
 --------------------------------------------------------------------------------
 #Projet de contenu

@@ -1,4 +1,3 @@
-<?php require_once 'ressource/PDO.php' ?>
 <?php require_once 'ressource/function.php' ?>
 <!----------------------------------------------------------------------------->
 
@@ -7,25 +6,58 @@
   if(!empty($_POST)){
 
       $errors = array();
+      require_once 'ressource/PDO.php';
 
-
-        if(empty($_POST['username']) || !preg_match('/^[a-zA-Z0-9_]+$/', $_POST['username'])){ 
+        if(empty($_POST['username']) || !preg_match('/^[a-zA-Z0-9_]+$/', $_POST['username'])){
 
           $errors['username'] = "Votre pseudo n'est pas valide!";
+        } else {
+
+          $req = $PDO->prepare('SELECT id FROM users WHERE username = ?');
+          $req->execute([$_POST['username']]);
+
+          $users = $req->fetch();
+          if($users){
+
+            $errors['username'] = 'Ce pseudo est déjà pris.';
+
           }
+
+        }
 
         if(empty($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
 
           $errors['email'] = "Votre email n'est pas valide!";
-          }
+          } else {
 
+            $req = $PDO->prepare('SELECT id FROM users WHERE email = ?');
+            $req->execute([$_POST['email']]);
+
+            $users = $req->fetch();
+            if($users){
+
+              $errors['email'] = 'Cet email est déjà pris.';
+
+            }
+            }
         if(empty($_POST['password']) || $_POST['password'] != $_POST['password_confirm']){
 
           $errors['password'] = "Votre password n'est pas valide!";
           }
 
 
-    //debug($errors); //permet de voir les messages d'erreurs.
+
+        if (empty($errors)){
+
+          $req = $PDO->prepare("INSERT INTO users SET username = ?, password = ?, email = ?");
+          $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+          $req->execute([$_POST['username'],$password, $_POST['email']]);
+          die('Votre compte a bien été crée');
+
+          }
+
+
+    debug($errors); //permet de voir les messages d'erreurs.
   }
  ?>
 
