@@ -49,12 +49,11 @@
 
         if (empty($errors)){
 
-          $req = $PDO->prepare("INSERT INTO users SET username = ?, password = ?, email = ? confirmation_token = ?");
-          $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
-          $token = str_random(60);
-
-          $req->execute([$_POST['username'],$password, $_POST['email'], $token]);
-          $user_id = $PDO->lastInsertId();
+          $req = $PDO->prepare("INSERT INTO users SET username = ?, password = ?, email = ?,confirmation_token = ?"); //Defini une variable avec la requete PDO pour inseré les données de formulaire dans ma BDD
+          $password = password_hash($_POST['password'], PASSWORD_BCRYPT); //Crypte mon mot de passe
+          $token = str_random(60);//Systeme de token
+          $req->execute([$_POST['username'],$password, $_POST['email'], $token]);//execute la demande d'enregistrement
+          $user_id = $PDO->lastInsertId();//permet de crée une variable avec l'id du user
           mail($_POST['email'], 'Confirmation de votre compte',"Afin de valider votre compte veuillez confirmer via ce lien\n\nhttp://localhost/Renaissance/confirm.php?id=$user_id&token=$token");
           header('Location: login.php');
           exit();
