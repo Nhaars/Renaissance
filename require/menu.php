@@ -52,7 +52,7 @@
 <div class="off-canvas-content" data-off-canvas-content>
   <div class="nav-bar">
       <div class="nav-bar-left">
-
+<h3><small>//Renaissance</small></h3>
       </div>
       <div class="nav-bar-right">
         <ul class="menu">

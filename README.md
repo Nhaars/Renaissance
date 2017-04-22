@@ -1,8 +1,8 @@
 --------------------------------------------------------------------------------
 #PRIORITE!!!    
 --------------------------------------------------------------------------------
-
- - Installe Maildev pour pouvoir envoyé des mails directement avec Wamp
+- Terminer tuto sur l'espace membre.
+- Terminer mise en page d'article.
 
 --------------------------------------------------------------------------------
 #TUTO
@@ -12,7 +12,6 @@
     https://www.grafikart.fr/tutoriels/php/gerer-news-php-43
 
 - *Création d'un espace membre.*
-
     https://youtu.be/YNbPMm08jcw 39:00
 
     https://youtu.be/s7qtAnH5YkY      
@@ -41,7 +40,8 @@
 - Chat.
 - Systeme d'article/blog/Portfolio.
 - Edition de profile.[Pseudo/Annif/MDP/Avatar]
-- Systeme de membre.
+- Template d'article.(Inspiration 'Alsacecréation')
+- API réseaux sociaux.
 
 --------------------------------------------------------------------------------
 #Projet de contenu
@@ -68,4 +68,4 @@
         - Moduler avec SASS.
 
     - Apprentissage de SASS.
-        - A venir.
+        - (A définir).

@@ -10,6 +10,9 @@
   </head>
   <body>
 
+<div class="couleur">
+
+
 
     <?php require_once 'require/menu.php' ?>
 
@@ -26,5 +29,6 @@
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
     <script src="js/app.js"></script>
+    </div>
   </body>
 </html>
