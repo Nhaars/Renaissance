@@ -12,7 +12,7 @@
     https://www.grafikart.fr/tutoriels/php/gerer-news-php-43
 
 - *Création d'un espace membre.*
-    https://youtu.be/YNbPMm08jcw 39:00
+    https://youtu.be/YNbPMm08jcw 46:36
 
     https://youtu.be/s7qtAnH5YkY      
     https://youtu.be/vHs9sPIA61k
@@ -30,7 +30,7 @@
 --------------------------------------------------------------------------------
 
  - Fonction TOKEN [fix]
- - Email ne s'envoi plus (Voir Maildev)
+ - Email ne s'envoi plus (Voir Maildev) [fix]
 
 --------------------------------------------------------------------------------
 #Features à venir
